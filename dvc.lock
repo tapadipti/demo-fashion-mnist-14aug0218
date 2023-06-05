@@ -27,30 +27,30 @@ stages:
       params.yaml:
         train.batch_size: 128
         train.dropout: 0.45
-        train.hidden_units: 64
+        train.hidden_units: 128
         train.lr: 0.001
         train.num_epochs: 2
     outs:
     - path: dvclive/metrics.json
       hash: md5
-      md5: a5b70017ca23ec7c21e409370b5e392c
-      size: 54
+      md5: e6ea5cdc72b08c34c61cd1c221fcd484
+      size: 53
     - path: dvclive/plots/metrics/accuracy.tsv
       hash: md5
-      md5: 25e2b3c17913cfaef2db21b98598713e
+      md5: 6210ca1a5ea769d0cf2863ea1040bd70
       size: 55
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 2b86090dfa5f4d5dd870d2c69c8be7b5
-      size: 3681312
+      md5: 0081b008b349bfbf0bda024efe3b76d3
+      size: 7324888
     - path: output/myfmmodel.tar.gz
       hash: md5
-      md5: ccb1fbc4058717db264ec42b4b3c2576
-      size: 3323187
+      md5: 8ff5ce73a06304212028b603103761ce
+      size: 6732935
     - path: output/train_logs.csv
       hash: md5
-      md5: 5fa00d63f90fd15bfcabe60d2bdb12dc
-      size: 99
+      md5: 3fe91a672b4bbd47ace73a059c48c568
+      size: 100
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -60,8 +60,8 @@ stages:
       size: 54950285
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 2b86090dfa5f4d5dd870d2c69c8be7b5
-      size: 3681312
+      md5: 0081b008b349bfbf0bda024efe3b76d3
+      size: 7324888
     - path: src/evaluate.py
       hash: md5
       md5: d55658c1947e760905f8784a695033b4
@@ -69,14 +69,14 @@ stages:
     outs:
     - path: output/metrics.json
       hash: md5
-      md5: 58570f0a9eadf9093cd512cab32f0b3d
+      md5: d128efff9eb19d84c2eba99e0e6d14cf
       size: 60
     - path: output/predictions.json
       hash: md5
-      md5: ce464c046ec4f7077a5958636ea57753
+      md5: b8ab2cb7d0ed8ee98d92da95c8d9dd91
       size: 310000
     - path: output/test/samples_of_mispredicted_images/
       hash: md5
-      md5: b73c859d872cc6f324ea36555fff3f68.dir
-      size: 171064
+      md5: e757e0f4e58c502aabb353fd8b790662.dir
+      size: 169291
       nfiles: 10
